@@ -20,7 +20,7 @@ spring:
 
 
 
-spring.ai.openai.api-key: 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
+spring.ai.openai.api-key: ${groq_api}
 spring.ai.openai.base-url: https://api.groq.com/openai
 spring.ai.openai.chat.options.model: "openai/gpt-oss-20b"
 
