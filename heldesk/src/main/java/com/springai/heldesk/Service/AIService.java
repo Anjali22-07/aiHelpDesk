@@ -23,13 +23,18 @@ public class AIService {
 
 
         //basic call to LLM
-        return this.chatClient
+        var response= this.chatClient
         .prompt() 
         .tools(ticketDatabaseTools)
         .system(systemResourcePrompt)
         .user(query)
         .call()
-        .content();
+         .chatResponse();   // THIS exists for your version
+
+    return response.getResult().getOutput().getText();
+
+       
+    
     }
 
     

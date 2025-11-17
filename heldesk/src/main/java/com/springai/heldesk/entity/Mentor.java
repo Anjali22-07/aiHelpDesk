@@ -14,25 +14,9 @@ public class Mentor {
     private String mentor_name;
     private String skills;
     private String expereince;
-    private int assigned_tickets;
+    private String category;
+    private int assigned_tickets=0;
 
-
-
-    
-    @Override
-    public String toString() {
-        return "Mentor [mentor_id=" + mentor_id + ", mentor_name=" + mentor_name + ", skills=" + skills
-                + ", expereince=" + expereince + ", assigned_tickets=" + assigned_tickets + "]";
-    }
-    public Mentor(int mentor_id, String mentor_name, String skills, String expereince, int assigned_tickets) {
-        this.mentor_id = mentor_id;
-        this.mentor_name = mentor_name;
-        this.skills = skills;
-        this.expereince = expereince;
-        this.assigned_tickets = assigned_tickets;
-    }
-    public Mentor() {
-    }
     public int getMentor_id() {
         return mentor_id;
     }
@@ -57,13 +41,41 @@ public class Mentor {
     public void setExpereince(String expereince) {
         this.expereince = expereince;
     }
+    public String getCategory() {
+        return category;
+    }
+    public void setCategory(String category) {
+        this.category = category;
+    }
     public int getAssigned_tickets() {
         return assigned_tickets;
     }
     public void setAssigned_tickets(int assigned_tickets) {
         this.assigned_tickets = assigned_tickets;
-    } 
+    }
+    public Mentor(int mentor_id, String mentor_name, String skills, String expereince, String category,
+            int assigned_tickets) {
+        this.mentor_id = mentor_id;
+        this.mentor_name = mentor_name;
+        this.skills = skills;
+        this.expereince = expereince;
+        this.category = category;
+        this.assigned_tickets = assigned_tickets;
+    }
+    public Mentor() {
+    }
+    @Override
+    public String toString() {
+        return "Mentor [mentor_id=" + mentor_id + ", mentor_name=" + mentor_name + ", skills=" + skills
+                + ", expereince=" + expereince + ", category=" + category + ", assigned_tickets=" + assigned_tickets
+                + "]";
+    }
+
+    
+  
 
 
+    
+   
 
 }

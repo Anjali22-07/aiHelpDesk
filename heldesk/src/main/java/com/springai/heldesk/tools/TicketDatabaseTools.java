@@ -5,7 +5,9 @@ import org.springframework.ai.tool.annotation.ToolParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.springai.heldesk.Service.MentorService;
 import com.springai.heldesk.Service.TicketService;
+import com.springai.heldesk.entity.Mentor;
 import com.springai.heldesk.entity.Ticket;
 
 @Component
@@ -13,12 +15,18 @@ public class TicketDatabaseTools {
 
     @Autowired
     private TicketService ticketService;
+    @Autowired
+    private MentorService mentorService;
+
 
     //create Tools
 
      @Tool(description = "This tool is used for ticket creation")
      public Ticket createToolTicket(@ToolParam(description = "new Ticket Creation tool")Ticket ticket){
       try {
+
+         Mentor mentor= mentorService.getByCategory(ticket.getCategory());
+         ticket.setMentor(mentor);
 
          System.out.println("Going to create ticket");
          System.out.println(ticket);
