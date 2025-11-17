@@ -73,7 +73,10 @@ mvn spring-boot:run
 - Push to the branch: git push origin feature/your-feature-name.
 - Open a pull request.
 
-License
+## License
 
 This project is licensed under the [MIT License](License)
-.
+
+## Author 
+
+[Anjali SIngh](Anjali22-07)
