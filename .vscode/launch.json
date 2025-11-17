@@ -9,9 +9,7 @@
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}",
-            "env": {
-                "OPEN_API_KEY": "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"
-                       }
+           
         },
         {
             "type": "java",
