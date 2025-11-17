@@ -1,0 +1,24 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "env": {
+                "OPEN_API_KEY": "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"
+                       }
+        },
+        {
+            "type": "java",
+            "name": "HeldeskApplication",
+            "request": "launch",
+            "mainClass": "com.springai.heldesk.HeldeskApplication",
+            "projectName": "heldesk"
+        }
+    ]
+}
