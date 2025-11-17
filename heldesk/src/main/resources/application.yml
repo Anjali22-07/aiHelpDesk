@@ -16,8 +16,13 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
-
-
+ 
+  ai:
+    chat:
+      memory:
+        repository:
+          jdbc:
+           initialize-schema: always
 
 
 spring.ai.openai.api-key: ${groq_api}
